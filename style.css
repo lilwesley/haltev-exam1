@@ -3,7 +3,8 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  padding-top: 70px;
 }
 
 /* .main-header {
@@ -25,12 +26,15 @@ header {
   display: flex;
   color: white;
   background-color: rgb(70, 70, 70);
-  padding: 10px;
+  padding: 1em 2.5em;
   justify-content: space-between;
   /* flex-wrap: wrap; */
   width: 100%;
   align-items: center;
   /* justify-items: center; */
+  position: fixed;
+  margin: 0;
+  top: 0;
 }
 
 .header h3 {
@@ -57,8 +61,13 @@ header {
 
 .main-nav a {
   text-decoration: none;
-  color: whitesmoke;
+  color: white;
   margin-right: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.main-nav a:hover {
+  color: rgb(0, 195, 255);
 }
 
 .btn-home a {
@@ -79,8 +88,21 @@ header {
 
 .img-container {
   text-align: center;
-  margin: 20px auto;
+  /* margin: 60px auto; */
+  margin-bottom: 15px;
+  /* background-color: aqua; */
+  /* background-image: url(./assets/good.png); */
 }
+
+.nama-wesley {
+  color: rgb(0, 156, 204);
+  /* color: rgb(0, 195, 255); */
+}
+
+/* .bg-image{
+  background-image: url(./assets/good.png);
+  margin-bottom: 50px;
+} */
 
 .img-container img {
   max-width: 250px;
@@ -106,7 +128,7 @@ header {
 
 .badge {
   /* display: flex; */
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(0, 156, 204);
   justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
@@ -115,18 +137,195 @@ header {
   font-weight: normal;
 }
 
-/* Set tinggi secara manual */
-#carouselExampleCaptions .carousel-inner {
-  height: 500px;
+.container-skill {
+  min-height: 100px;
+  /* background-color: red; */
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  border-radius: 10px;
+  padding: 1em 2.5em;
+  /* flex-grow: 1; */
+  justify-content: center;
 }
 
-#carouselExampleCaptions .carousel-item {
-  height: 500px;
+.cardskill {
+  border: 1px solid #c5c5c5;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  width: 12rem;
+  height: 350px;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Bikin gambarnya full size mengikuti containernya */
-#carouselExampleCaptions .carousel-item img {
+.cardskill h3 {
+  margin-top: 10px;
+}
+
+.cardskill img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.skill-grid-5 {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+  gap: 10px;
+  padding: 1em 2.5em;
+}
+
+.card-body p {
+  margin: 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  .skill-grid-5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .skill-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .skill-grid-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container-socmed {
+  background-color: rgb(70, 70, 70);
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2.5em;
+}
+
+.container-socmed h3 {
+  color: white;
+}
+
+.socmed {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.socmed p {
+  margin: 0;
+  line-height: 1;
+  color: whitesmoke;
+}
+
+.icon-socmed {
+  color: white;
+}
+
+/* halaman portfolio */
+.main-skill {
+  padding: 1em 2.5em;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.skill-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 40px; */
+  overflow: hidden;
+  padding: 1em 2.5em;
+  display: flex;
+  gap: 1em;
+  max-height: 400px;
+  margin: 0 auto 40px auto;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 1.5em 2em;
+}
+
+.skill-text {
+  flex: 1;
+  align-items: center;
+  margin: auto;
+}
+
+.skill-text p {
+  text-align: justify;
+}
+
+.skill-image {
+  flex: 1;
+  border-radius: 10px;
+}
+
+.skill-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Beri object-fit contain agar gambarnya tidak terpotong */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.skill-container2 {
+  display: flex;
+  background-color: greenyellow;
+  padding: 1em 2.5em;
+  max-height: 400px;
+  gap: 1em;
+  margin-top: 5em;
+}
+
+.socmed a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* bagian skill */
+
+.tescard {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  overflow: hidden;
+  padding: 1em 2.5em;
+}
+.tescardkonten {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tekscard {
+  padding: 30px;
+  flex: 1;
+}
+.card-text h2 {
+  margin-top: 0;
+}
+.card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
 }
